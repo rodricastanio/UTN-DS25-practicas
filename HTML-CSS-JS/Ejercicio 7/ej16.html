@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <script src="funciones.js"></script>
+    <style>
+        .portero {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .portero .fila {
+            display: flex;
+            gap: 20px;
+        }
+
+        .fila button {
+            font-size: 20px;
+            width: 100px;
+            border: 2px solid black;
+        }
+
+        .fila button:hover {
+            background-color: grey;
+            color: white;
+        }
+
+        .fila:first-child button:last-child {
+            margin-left: 120px;
+        }
+
+        .visores {
+            display: flex;
+            flex-direction: row;
+            margin-left: 35px;
+            gap: 200px;
+        }
+
+        .visores p {
+            background-color: aqua;
+        }
+
+        .mensaje {
+            border: 1px solid black;
+            margin-top: 20px;
+            width: 327px;
+            border: 2px dotted black;
+            padding: 05px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="portero">
+        <div class="fila">
+            <button id="piso">PISO</button>
+            <button id="dto">DPTO: </button>
+        </div>
+        <div class="fila">
+            <button onclick="ingresarNum(1)">1</button>
+            <button onclick="ingresarNum(2)">2</button>
+            <button onclick="ingresarNum(3)">3</button>
+        </div>
+        <div class="fila">
+            <button onclick="ingresarNum(4)">4</button>
+            <button onclick="ingresarNum(5)">5</button>
+            <button onclick="ingresarNum(6)">6</button>
+        </div>
+        <div class="fila">
+            <button onclick="ingresarNum(7)">7</button>
+            <button onclick="ingresarNum(8)">8</button>
+            <button onclick="ingresarNum(9)">9</button>
+        </div>
+        <div class="fila">
+            <button onclick="ingresarNum(0)">0</button>
+            <button onclick="llamar()">Llamar</button>
+            <button onclick="borrar()">Borrar</button>
+        </div>
+    </div>
+
+    <div class="mensaje">
+        <p id="msj"></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+/* Todos los CSS se diseñaron únicamente para pantallas de computadoras.
+   No se realizaron ajustes específicos para dispositivos móviles.*/
+
+body, html {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    background-color: rgb(237, 235, 235);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Rowdies', cursive;
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.titulo{
+    background-color: rgb(117, 167, 249);
+    top: 0;
+    height: 65px;
+}
+
+
+ul{
+    list-style: none;
+}
+.hob{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 350px;
+}
+
+.back p{
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.back a {
+    display: inline-block;
+    color: rgb(49, 110, 210);
+}
+
+.back a:hover{
+    transform: scale(1.1);
+    color:black;
+}

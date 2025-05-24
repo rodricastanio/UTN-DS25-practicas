@@ -1,0 +1,365 @@
+/* Layout */
+body {
+    margin: 0;
+    background-color: rgb(204, 168, 115);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabeza {
+    background-image: url(../imagenes/header.png);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+}
+
+.cabeza header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.conc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabeza img {
+    height: 80px;
+}
+
+.cabeza h1 {
+    margin: 0;
+    font-size: 55px;
+    color: rgb(176, 77, 77);
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 228, 175);
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+}
+
+.menu li.drop {
+    position: relative;
+}
+
+.menu .submenu {
+    position: absolute;
+    background-color: rgb(255, 228, 175);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu .drop:hover .submenu {
+    display: flex;
+}
+
+.menu a {
+    color: rgb(74, 55, 55);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #f4e1c1;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+footer a {
+    color: rgb(74, 55, 55);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px 0;
+}
+
+/*Inicio */
+.inicio {
+    text-align: center;
+    padding: 20px;
+}
+
+.inicio h2 {
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.inicio .bloques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inicio .bloques .bloque {
+    width: 300px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.inicio .bloques .bloque h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.inicio .bloques .bloque a {
+    color: black;
+    text-decoration: none;
+}
+
+.inicio .bloques .bloque h5 {
+    color: rgb(55, 47, 47);
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inicio .bloques .bloque h4 {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inicio .bloques .bloque a:hover {
+    color: grey
+}
+
+.inicio .bloques .bloque:hover {
+    transform: scale(1.1);
+}
+
+
+.inicio .bloques .bloque figure img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*Secciones*/
+.secciones {
+    text-align: center;
+    padding: 20px;
+}
+
+.secciones h1 {
+    margin-top: 35px;
+    font-size: 45px;
+}
+
+.secciones .bloques-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secciones .bloques-seccion .bloque-seccion {
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.secciones .bloques-seccion .bloque-seccion h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.secciones .bloques-seccion .bloque-seccion figure img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#descripcion-sec {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*Registro*/
+
+.reg h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.reg h3 {
+    text-align: center;
+}
+
+.reg .datos {
+    margin: auto 250px;
+    background-color: rgb(155, 106, 75);
+    border-radius: 50px;
+    padding: 30px;
+}
+
+.reg .datos form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 10px;
+}
+
+.reg .datos label {
+    font-size: 25px;
+}
+
+.reg .datos input {
+    border-radius: 50px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.reg .datos input[type="submit"] {
+    width: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    margin: 25px auto 0 auto;
+}
+
+.reg .datos input[type="submit"]:hover {
+    background-color: grey;
+    transform: scale(1.2);
+
+}
+
+.reg .datos select {
+    width: 400px;
+    height: 40px;
+}
+
+
+.reg .datos form input[type="radio"] {
+    margin: 0;
+}
+
+.reg .datos .sexo-opc{
+    display: flex;
+    gap: 10px;
+}
+
+.reg .datos .sexo-opc label{
+    font-size: 20px;
+}
+
+/*Contacto*/
+.contacto h1{
+    text-align: center;
+}
+
+.contacto .info-contacto{
+    background-color: rgb(195, 94, 94);
+    margin: auto 480px;
+    border-radius: 30px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+.contacto .info-contacto a{
+    color: white;
+    font-weight: bold;
+}
+
+.contacto .info-contacto a:hover{
+    color: grey;
+    transform: scale(1.1);
+}
+
+.contacto .info-contacto li{
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.contacto .form-contacto {
+    margin: 50px 250px;
+    background-color: rgb(155, 106, 75);
+    border-radius: 50px;
+    padding: 30px;
+}
+.contacto .form-contacto form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 10px;
+}
+
+.contacto .form-contacto label {
+    font-size: 25px;
+}
+
+.contacto .form-contacto input {
+    border-radius: 50px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.contacto .form-contacto textarea{
+    height: 70px;
+}
+
+
+.contacto .form-contacto input[type="submit"] {
+    width: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    margin: 25px auto 0 auto;
+}
+
+.contacto .form-contacto input[type="submit"]:hover {
+    background-color: grey;
+    transform: scale(1.2);
+
+}
