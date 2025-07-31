@@ -1,17 +1,27 @@
-import React from 'react';
 import './estilos/estilo.css';
-import Encabezado from './componentes/Encabezado';
-import Navegacion from './componentes/Navegacion';
-import ListaGeneros from './componentes/ListaGeneros';
-import PiePagina from './componentes/PiePagina';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./pages/Home"
+import Registro from "./pages/Registro"
+import Contacto from './pages/Contacto';
+import Layout from "./componentes/Layout"
+import Secciones from './pages/Secciones';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Encabezado />
-      <Navegacion />
-      <ListaGeneros />
-      <PiePagina />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          {/* para dejar fijo el layout siempre */}
+          <Route path="/" element={<Layout />}> 
+            <Route index element={<Home />} />
+            <Route path="registro" element={<Registro />} />
+            <Route path="contacto" element={<Contacto />} />
+            <Route path="secciones" element={<Secciones />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

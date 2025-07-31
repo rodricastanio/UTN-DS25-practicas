@@ -1,8 +1,7 @@
-import React from 'react';
-import generos from '../generos';
-import TarjetaGenero from './TarjetaGenero';
+import generos from '../utils/generos';
+import TarjetaGenero from '../componentes/TarjetaGenero';
 
-const ListaGeneros = () => {
+const Home = () => {
   return (
     <div className="inicio">
       <h2>En Crónicas de Tinta ofrecemos distintas categorías de lectura</h2>
@@ -15,4 +14,4 @@ const ListaGeneros = () => {
   );
 };
 
-export default ListaGeneros;
+export default Home;

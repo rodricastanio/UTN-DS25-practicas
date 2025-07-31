@@ -1,24 +1,30 @@
-import React from 'react';
-import generos from '../generos';
+import generos from '../utils/generos';
+import { Link } from 'react-router-dom';
 
 const Navegacion = () => {
   return (
     <div className="menu">
       <nav>
         <ul>
-          <li><a href="principal.html">Inicio</a></li>
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
           <li className="drop">
-            <a href="secciones.html">Secciones</a>
+            <Link to="secciones">Secciones</Link>
             <ul className="submenu">
               {generos.map(genero => (
                 <li key={genero.id}>
-                  <a href={`secciones.html#${genero.id}`}>{genero.nombre}</a>
+                 <a href={`secciones#${genero.id}`}>{genero.nombre}</a>
                 </li>
               ))}
             </ul>
           </li>
-          <li><a href="registro.html">Registrate</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li>
+            <Link to="registro">Registrate</Link>
+          </li>
+          <li>
+            <Link to="contacto">Contacto</Link>
+          </li>
         </ul>
       </nav>
     </div>

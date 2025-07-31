@@ -188,13 +188,13 @@ footer a:hover {
 }
 
 .secciones .bloques-seccion {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas iguales */
+  justify-items: center; /* centra cada ítem en su celda */
+  gap: 20px;
+  margin: 0 auto;
 }
+
 
 .secciones .bloques-seccion .bloque-seccion {
     width: 400px;
