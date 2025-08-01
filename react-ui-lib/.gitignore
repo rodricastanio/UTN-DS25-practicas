@@ -1,0 +1,16 @@
+# Ignora dependencias
+node_modules/
+
+# Ignora carpetas de build
+dist/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Logs
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

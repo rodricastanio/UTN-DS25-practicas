@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@import '../estilos/form.css' 
+/* uso el form.css debido a que habia muchos inputs y label */
+
