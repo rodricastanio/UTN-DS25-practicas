@@ -13,13 +13,22 @@ function Secciones({ libros }) {
   });
 
   return (
-    <div className="secciones bg-red-400 p-10">
+    <div className="secciones bg-gradient-to-r from-[#A44A3F] to-[#D4A373]
+    
+    // lg ver
+    lg: p-5
+
+    ">
 
       {/* Buscador */}
-      <div className="busqueda m-4">
+      <div className="busqueda mt-8">
         <form
           className="relative top-1/2 mt-2.5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50px] 
-          h-[50px] bg-white rounded-full border-4 border-white p-1 transition-all duration-1000 overflow-hidden hover:w-[300px] cursor-pointer"
+          h-[50px] bg-white rounded-full border-4 border-white p-1 transition-all duration-1000 overflow-hidden
+         hover:w-[300px] cursor-pointer
+         
+        
+        "
         >
           <input
             type="search"
@@ -36,7 +45,11 @@ function Secciones({ libros }) {
         {/* Mostrar productos filtrados */}
         {busqueda.trim() !== "" && (
           <>
-            <p className="text-2xl font-bold text-center">Mostrando {librosFiltrados.length} de {libros.length} libros</p>
+            <p className="text-2xl font-bold text-center
+            // lg ver
+            lg:mb-6
+            
+            ">Mostrando {librosFiltrados.length} de {libros.length} libros</p>
 
             {librosFiltrados.length > 0 ? (
               <TarjetaLibro libros={librosFiltrados} />
@@ -56,9 +69,14 @@ function Secciones({ libros }) {
               key={genero.id}
               id={nombreGenero.toLowerCase().replace(/\s/g, "")}
             >
-              <h1 className="font-bold text-5xl text-center m-5">{nombreGenero}</h1>
+              <h1 className="font-bold text-5xl text-center mb-5 text-white
+              // lg ver
+              lg:text-6xl lg:mt-7
+              ">{nombreGenero}</h1>
               <p
-                className="text-center text-gray-800 font-bold mb-5.5"
+                className="text-center text-black font-bold mb-5.5
+                // lg ver
+                lg:text-2xl lg:mb-15"
                 id="descripcion-sec"
               >
                 Ofrecemos los siguientes libros a continuación

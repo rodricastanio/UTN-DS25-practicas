@@ -4,7 +4,7 @@ const PiePagina = () => {
   return (
     <footer>
       <div className="footer-content flex flex-col items-center 
-      justify-center mt-2.5 bg-amber-200 p-8 gap-5 text-gray-800" 
+      justify-center mt-2.5 bg-gradient-to-l from-[#FAF3E0] to-[#C9B79C] p-8 gap-5 text-gray-800" 
       >
         <p><a href="mailto:cronicasdeTinta@gmail.com">cronicasdeTinta@gmail.com</a></p>
         <div className="redes flex flex-row gap-4">

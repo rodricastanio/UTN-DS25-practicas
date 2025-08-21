@@ -33,24 +33,38 @@ function Colaboracion({ agregarLibro }) {
     };
 
     return (
-        <div className="colaboracion bg-red-400 p-5">
+        <div className="colaboracion bg-gradient-to-r from-[#A44A3F] to-[#D4A373] p-5">
             <div className="descripcion">
-                <h1 className="text-2xl font-bold text-center p-2.5">
+                <h1 className="text-2xl font-bold text-center p-2.5 text-white
+                // lg ver
+                lg:text-4xl mb-5
+                
+                ">
                     ¡Colaborá con tus libros favoritos!
                 </h1>
-                <h2 className="text-white text-center font-medium">
+                <h2 className="text-black text-center font-medium
+                // lg ver
+                lg:text-2xl
+                ">
                     En Crónicas de Tinta ofrecemos a nuestros lectores la posibilidad de
                     contribuir con sus libros favoritos.
                 </h2>
-                <p className="text-center font-medium m-2.5">
+                <p className="text-center m-2.5 font-bold 
+                // lg ver
+                lg:mb-10
+                ">
                     A continuación, te proponemos un formulario para completar los datos
                     del libro en cuestión.
                 </p>
             </div>
 
             <form
-                className="bg-amber-100 w-full h-100 m-auto flex items-center flex-col
-                 rounded-3xl p-8"
+                className="bg-amber-100 w-full h-auto m-auto flex items-center flex-col
+                 rounded-3xl p-15
+                 
+                 // lg ver
+            lg:w-100 lg:h-auto
+                 "
                 onSubmit={enviarFormulario}
             >
                 <input
@@ -74,7 +88,7 @@ function Colaboracion({ agregarLibro }) {
                     name="gen"
                     value={genero}
                     onChange={(e) => setGenero(e.target.value)}
-                    className="mb-6 bg-pink-300 appearance-none p-2.5 rounded-2xl hover:scale-110"
+                    className="mb-6 bg-[#A44A3F] appearance-none p-2.5 rounded-2xl hover:scale-110"
                 >
                     <option value="">Seleccioná género</option>
                     <option value="Romance">Romance</option>
@@ -95,9 +109,11 @@ function Colaboracion({ agregarLibro }) {
 
                 <button
                     type="submit"
-                    className=" bg-pink-400 hover:bg-pink-300 hover:text-black hover:scale-110
-           text-white text-2xl font-bold py-3 px-8 rounded-3xl 
-           shadow-lg transition-colors duration-300"
+                    className=" bg-[#A44A3F] hover:bg-[#A44A3F] transform transform-content duration-300 hover:scale-110
+           text-white w-30 h-10 rounded-2xl font-bold hover:text-black
+        //    lg ver
+        lg:h-15 text-2xl 
+            "
                 >
                     Enviar
                 </button>

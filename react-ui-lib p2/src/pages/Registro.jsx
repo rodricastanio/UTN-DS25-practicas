@@ -1,11 +1,13 @@
 function Registro() {
-
-
     return (
-        <div className="reg bg-red-400 p-5">
-            <h1 className="font-bold text-4xl text-center">Formulario de registro</h1>
+        <div className="reg bg-gradient-to-r from-[#A44A3F] to-[#D4A373] p-5">
+            <h1 className="font-bold text-4xl text-center text-white">Formulario de registro</h1>
             <h3 className="text-center mb-8 mt-2">A continuacion, complete los siguientes datos</h3>
-            <div className="bg-amber-100 w-full h-190 m-auto rounded-3xl p-8">
+            <div className="bg-amber-100 w-full h-190 m-auto rounded-3xl p-8
+            // lg ver
+            lg:w-100
+            
+            ">
                 <form className="flex flex-col m-auto items-center justify-center" action="" method="post">
                     <label htmlForfor="nombre">Nombre</label>
                     <input className="input-bg" type="text" id="nombre" name="nombre" required />
@@ -36,7 +38,7 @@ function Registro() {
                     </div>
 
                     <input className=" h-12 rounded-2xl font-bold
-                    bg-pink-400 hover:bg-pink-300 hover:text-black hover:scale-110
+                    bg-[#A44A3F] hover:bg-[#A44A3F] transform transform-content duration-300 hover:text-black hover:scale-110
            text-white
                     " type="submit" value="Enviar" />
                 </form>
