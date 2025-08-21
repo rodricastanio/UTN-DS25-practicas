@@ -33,23 +33,24 @@ function Colaboracion({ agregarLibro }) {
     };
 
     return (
-        <div className="colaboracion bg-red-400 p-0.5">
+        <div className="colaboracion bg-red-400 p-5">
             <div className="descripcion">
-                <h1 className="text-4xl font-bold text-center p-5">
+                <h1 className="text-2xl font-bold text-center p-2.5">
                     ¡Colaborá con tus libros favoritos!
                 </h1>
-                <h2 className="text-2xl text-center font-medium">
+                <h2 className="text-white text-center font-medium">
                     En Crónicas de Tinta ofrecemos a nuestros lectores la posibilidad de
                     contribuir con sus libros favoritos.
                 </h2>
-                <p className="text-center font-medium">
+                <p className="text-center font-medium m-2.5">
                     A continuación, te proponemos un formulario para completar los datos
                     del libro en cuestión.
                 </p>
             </div>
 
             <form
-                className="bg-white text-black flex flex-col gap-3 items-center justify-center p-15 w-180 h-130 m-auto rounded-3xl mt-10 mb-10"
+                className="bg-amber-100 w-full h-100 m-auto flex items-center flex-col
+                 rounded-3xl p-8"
                 onSubmit={enviarFormulario}
             >
                 <input

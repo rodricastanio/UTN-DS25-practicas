@@ -4,11 +4,12 @@ function TarjetaLibro({ genero, libros = [] }) {
     : libros;
 
   return (
-    <div className="p-5.5 grid grid-cols-2 gap-10 place-items-center">
+    <div className=" grid gap-10 place-items-center">
       {librosAMostrar.map(libro => (
         <div
           key={libro.titulo} 
-          className="bloque bg-amber-100 flex flex-col w-110 items-center justify-center p-6 rounded-3xl hover:scale-105 m-auto min-h-[700px]"
+          className="bloque bg-amber-100 flex flex-col w-70 items-center justify-center p-6 rounded-3xl 
+          hover:scale-105 m-auto min-h-[700px]"
         >
           <h2 className="font-bold text-2xl text-center mb-3.5">{libro.titulo}</h2>
           <figure>

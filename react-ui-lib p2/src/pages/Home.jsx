@@ -11,8 +11,8 @@ const Home = () => {
 
 
   return (
-    <div className="inicio bg-red-400 p-10">
-      <h2 className='text-center font-bold text-3xl mb-6'>En Crónicas de Tinta ofrecemos distintas categorías de lectura</h2>
+    <div className="inicio bg-red-400 p-2.5">
+      <h2 className='text-center font-bold text-2xl p-2.5'>En Crónicas de Tinta ofrecemos distintas categorías de lectura</h2>
       <CatalogoGeneros generos={gen}/>
       {/* aca establezco que generos va a tener el valor de gen, declarado en el state */}
 

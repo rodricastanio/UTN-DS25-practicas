@@ -18,7 +18,8 @@ function Secciones({ libros }) {
       {/* Buscador */}
       <div className="busqueda m-4">
         <form
-          className="relative top-1/2 mt-2.5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50px] h-[50px] bg-white rounded-full border-4 border-white p-1 transition-all duration-1000 overflow-hidden hover:w-[300px] cursor-pointer"
+          className="relative top-1/2 mt-2.5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50px] 
+          h-[50px] bg-white rounded-full border-4 border-white p-1 transition-all duration-1000 overflow-hidden hover:w-[300px] cursor-pointer"
         >
           <input
             type="search"
@@ -55,7 +56,7 @@ function Secciones({ libros }) {
               key={genero.id}
               id={nombreGenero.toLowerCase().replace(/\s/g, "")}
             >
-              <h1 className="font-bold text-5xl text-center mb-4">{nombreGenero}</h1>
+              <h1 className="font-bold text-5xl text-center m-5">{nombreGenero}</h1>
               <p
                 className="text-center text-gray-800 font-bold mb-5.5"
                 id="descripcion-sec"

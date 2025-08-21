@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Navegacion = () => {
   return (
-    <div className="menu bg-amber-200 p-4.5">
+    <div className="menu bg-amber-200 p-2.5">
   <nav>
-    <ul className="flex gap-10.5 items-center justify-center text-2xl
-     text-red-400 font-bold ">
+    <ul className="grid grid-cols-3 justify-center items-center text-center text-red-400 font-bold gap-4">
       <li className='hover:underline hover:scale-105 hover:text-red-500 '>
         <Link to="/">Inicio</Link>
       </li>
