@@ -1,0 +1,41 @@
+.input-bg{
+    background-color: #A44A3F;
+    width: 300px;
+    border-radius: 50px;
+    height: 40px;
+    border: none;
+    padding: 0 15px;
+}
+
+input{
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.sexoclass{
+    margin-bottom: 0;
+}
+
+input[type="submit"] {
+    width: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    margin: 25px auto 0 auto;
+}
+
+
+label{
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+}
+
+.input-bg-contacto{
+    background-color: #A44A3F;
+    width: 250px;
+    border-radius: 50px;
+    height: 40px;
+    border: none;
+    padding: 0 15px;
+}
