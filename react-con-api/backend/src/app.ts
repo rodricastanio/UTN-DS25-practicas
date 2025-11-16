@@ -14,7 +14,6 @@ import { logRequest } from './middlewares/logger.middleware';
 
 import cors from "cors";
 
-
 // Creamos la aplicación de Express (nuestro servidor)
 const app = express();
 
@@ -23,43 +22,26 @@ const PORT = 3000;
 
 app.use(cors({ origin: "http://localhost:5173" }));
 
-// 📌 Middlewares globales (se ejecutan antes de las rutas)
-
-// Permite que Express entienda JSON en el body de las requests
+// 📌 Middlewares globales
 app.use(express.json());
-
-// Middleware que loguea cada request con método, URL, hora, etc.
 app.use(logRequest);
 
-// 📌 Rutas de la API
-// Todas las rutas que empiecen con /api/books serán manejadas por bookRoutes
-app.use('/api/books', bookRoutes);
-app.use("/api/generos", generoRouter);
+// 📌 Rutas oficiales
+app.use('/books', bookRoutes);
+app.use('/generos', generoRouter);
 
-// 📌 Middleware de manejo de errores
-// Tiene que ir SIEMPRE al final, porque captura cualquier error de las rutas o middlewares anteriores
+// 📌 Rutas legacy (compatibilidad con tu frontend actual)
+app.use('/api/books', bookRoutes);
+app.use('/api/generos', generoRouter);
+
+// endpoint de prueba
+app.get('/', (req, res) => {
+  res.send('👋 ¡Hola esto esta funcionando correctamente!');
+});
+
+// 📌 Middleware de manejo de errores (SIEMPRE al final)
 app.use(handleError);
 
-//endpoint de prueba
- app.get('/', (req, res) => {
- res.send('👋 ¡Hola esto esta funcionando correctamente!');
- });
-
-// 📌 Arrancamos el servidor en el puerto definido
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
-
-
-
- // import express from 'express';
-// const app = express();
-// const PORT = 3000;
-// // Endpoint Hola Mundo
-// app.get('/', (req, res) => {
-//     res.send('👋 ¡Hola mundo desde Express!');
-// });
-// // Inicio del servidor
-// app.listen(PORT, () => {
-//     console.log(`🚀 Server running on port ${PORT}`);
-// });

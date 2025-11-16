@@ -121,9 +121,7 @@ function Secciones() {
       {gen.map((genero) => {
         const nombreGenero = genero.nombre;
         const idSec = genero.id ?? slug(nombreGenero);
-        const librosDelGenero = books.filter(
-          (b) => (b.categoria ?? b.genero) === nombreGenero
-        );
+       const librosDelGenero = books;
 
         return (
           <section key={idSec} id={idSec}>

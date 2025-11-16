@@ -1,30 +1,34 @@
-export interface Book {
-  id: number;
+import { Book as PrismaBook } from '../generated/prisma';
+
+// Usamos el tipo Book que genera Prisma
+export type Book = PrismaBook;
+
+export interface CreateBookRequest {
   titulo: string;
   autor: string;
-  descripcion: string;
-  genero: string;
-  imagen: string
- }
- export interface CreateBookRequest {
-  titulo: string;
-  autor: string;
-  descripcion: string;
-  genero: string;
-  imagen: string
- }
- export interface UpdateBookRequest {
-  titulo: string;
-  autor: string;
-  descripcion: string;
-  genero: string;
-  imagen: string
- }
- export interface BookResponse {
+  // Estos pueden venir o no, y en la DB pueden ser null
+  descripcion?: string | null;
+  genero?: string | null;
+  imagen?: string | null;
+  precio: number;
+}
+
+export interface UpdateBookRequest {
+  // Para update todo puede ser opcional
+  titulo?: string;
+  autor?: string;
+  descripcion?: string | null;
+  genero?: string | null;
+  imagen?: string | null;
+  precio?: number;
+}
+
+export interface BookResponse {
   book: Book;
   message: string;
- }
- export interface BooksListResponse {
+}
+
+export interface BooksListResponse {
   books: Book[];
   total: number;
- }
+}
