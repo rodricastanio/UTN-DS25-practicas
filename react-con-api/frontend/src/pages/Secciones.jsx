@@ -36,7 +36,7 @@ function Secciones() {
         const url = base ? `${base}/api/generos` : "/api/generos"; // usa proxy si no hay .env
         const data = await fetchJson(url);
         const list = Array.isArray(data) ? data : (data.generos ?? data.items ?? []);
-        setGen(list);
+  setGen(list);
       } catch (e) {
         console.error(e);
         setError(String(e));
@@ -52,7 +52,7 @@ function Secciones() {
         const base = import.meta.env.VITE_API_URL || "";
         const url = base ? `${base}/api/books` : "/api/books";
         const d = await fetchJson(url);
-        setBooks(Array.isArray(d) ? d : (d.books ?? d.items ?? []));
+  setBooks(Array.isArray(d) ? d : (d.books ?? d.items ?? []));
       } catch (e) {
         console.error(e);
         setError(String(e));
@@ -135,7 +135,7 @@ function Secciones() {
               Ofrecemos los siguientes libros a continuación
             </p>
 
-            <TarjetaLibro genero={nombreGenero} libros={librosDelGenero} />
+            <TarjetaLibro genero={genero.id} libros={librosDelGenero} />
           </section>
         );
       })}

@@ -1,40 +1,32 @@
-import { Genero } from "../types/generos.types";
+import prisma from '../config/prisma';
+import { Genero as GeneroType } from '../types/generos.types';
 
-export let genero: Genero[] = [
-  {
-    id: "romance",
-    nombre: "Romance",
+// Service that fetches genres from the database via Prisma.
+export async function getAllGeneros(): Promise<GeneroType[]> {
+  const rows = await prisma.genero.findMany({ orderBy: { id: 'asc' } as any });
+  // map DB rows to the frontend shape (destacado object)
+  return rows.map(r => ({
+    id: r.id,
+    nombre: r.nombre,
     destacado: {
-      titulo: "HeartStopper",
-      autor: "Por Alice Oseman",
-      imagen: "/imagenes/PortadaHeartStopper.jpeg",
-    },
-  },
-  {
-    id: "psicologia",
-    nombre: "Psicología",
+      titulo: r.destacadoTitulo,
+      autor: r.destacadoAutor,
+      imagen: r.destacadoImagen,
+    }
+  }));
+}
+
+// (optional) helper to fetch single genre
+export async function getGeneroById(id: string): Promise<GeneroType | null> {
+  const r = await prisma.genero.findUnique({ where: { id } });
+  if (!r) return null;
+  return {
+    id: r.id,
+    nombre: r.nombre,
     destacado: {
-      titulo: "Psicopatologia de la vida cotidiana",
-      autor: "Por Sigmund Freud",
-      imagen: "/imagenes/PortadaCotidiana.gif",
-    },
-  },
-  {
-    id: "terror",
-    nombre: "Terror",
-    destacado: {
-      titulo: "El instituto",
-      autor: "Por Stephen King",
-      imagen: "/imagenes/PortadaInstituto.jpeg",
-    },
-  },
-  {
-    id: "cienciaficcion",
-    nombre: "Ciencia Ficción",
-    destacado: {
-      titulo: "El problema de los 3 cuerpos",
-      autor: "Por Cixin Liu",
-      imagen: "/imagenes/Portada3Cuerpos.jpeg",
-    },
-  },
-];
+      titulo: r.destacadoTitulo,
+      autor: r.destacadoAutor,
+      imagen: r.destacadoImagen,
+    }
+  };
+}

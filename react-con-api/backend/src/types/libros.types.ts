@@ -8,7 +8,7 @@ export interface CreateBookRequest {
   autor: string;
   // Estos pueden venir o no, y en la DB pueden ser null
   descripcion?: string | null;
-  genero?: string | null;
+  genero: string; // genero es obligatorio según schema.prisma
   imagen?: string | null;
   precio: number;
 }
@@ -18,7 +18,7 @@ export interface UpdateBookRequest {
   titulo?: string;
   autor?: string;
   descripcion?: string | null;
-  genero?: string | null;
+  genero?: string; // no puede ser null porque el campo en DB no acepta null
   imagen?: string | null;
   precio?: number;
 }
